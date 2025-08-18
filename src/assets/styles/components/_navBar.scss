@@ -1,0 +1,30 @@
+.navBar {
+  @extend .containers-home;
+  min-width: 4rem;
+  max-width: 4rem;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  &.active {
+    max-width: 15rem;
+  }
+  .nav {
+    min-width: 15rem;
+    margin-left: 1rem;
+    .nav-item {
+      list-style-type: none;
+      margin-top: 1rem;
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: $color_primary;
+        svg {
+          margin-right: 1rem;
+          font-size: 2em;
+          fill: $color_primary;
+        }
+      }
+    }
+  }
+}

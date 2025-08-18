@@ -1,0 +1,33 @@
+$Azul_Cielo: #87ceeb;
+$Azul_Marino: #4682b4;
+$Gris_Nublado: #b0c4de;
+$Amarillo_Sol: #ffd700;
+$Blanco_Nieve: rgba(#ffffff, 0.3);
+$color_primary: #000; //#551a8b
+$color_secondary: #007aff;
+// Breakpoints para consultas de medios
+
+// Breakpoint mínimo para pantallas pequeñas (sm) >= 576px
+$min-width-sm: 576px;
+// Breakpoint máximo para pantallas pequeñas (sm) <= 575px
+$max-width-sm: 575px;
+
+// Breakpoint mínimo para pantallas medianas (md) >= 768px
+$min-width-md: 768px;
+// Breakpoint máximo para pantallas medianas (md) <= 767px
+$max-width-md: 767px;
+
+// Breakpoint mínimo para pantallas grandes (lg) >= 992px
+$min-width-lg: 992px;
+// Breakpoint máximo para pantallas grandes (lg) <= 991px
+$max-width-lg: 991px;
+
+// Breakpoint mínimo para pantallas extra grandes (xl) >= 1200px
+$min-width-xl: 1200px;
+// Breakpoint máximo para pantallas extra grandes (xl) <= 1199px
+$max-width-xl: 1199px;
+
+// Breakpoint mínimo para pantallas extra-extra grandes (xxl) >= 1400px
+$min-width-xxl: 1400px;
+// No es necesario definir un breakpoint máximo para xxl,
+// ya que no tiene límite superior en la mayoría de los diseños.

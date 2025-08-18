@@ -1,0 +1,18 @@
+@import "../var";
+$hamburger-layer-color: $color_primary !default;
+@import "../../../lib/hamburgers/hamburgers";
+
+.hamburger {
+  cursor: pointer;
+  .hamburger-box {
+    .hamburger-inner {
+      width: 30px;
+      &::after {
+        width: 30px;
+      }
+      &::before {
+        width: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "var";
+
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import 'swiper/scss/scrollbar';
+@import './lib/swiper';
+
+@import "./lib/hamburguers";
+@import "index";
+@import "./pages/home";
+@import "./components/navBar";
+@import "./components/container_weather_week";
+@import "./components/container_weather_actual";
+@import "./components/container_weather_day";
+@import "./components/container_weather_temperature";
+@import "./components/search_input";
+@import "./components/map";
+@import "./components/loading";
