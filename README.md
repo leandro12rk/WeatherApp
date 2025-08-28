@@ -49,19 +49,21 @@ Inicia el servidor de desarrollo
 bash
 Copiar código
 npm run dev
+
+
 📂 Estructura del proyecto
-lua
-Copiar código
+
 WeatherApp/
-│-- public/         # Recursos estáticos
-│-- src/
-│   │-- components/ # Componentes reutilizables
-│   │-- pages/      # Vistas principales
-│   │-- hooks/      # Custom hooks
-│   │-- styles/     # Estilos globales
-│-- package.json
-│-- README.md
-│-- LICENSE
+|-- public/         # Recursos estáticos
+|-- src/
+|   |-- components/ # Componentes reutilizables
+|   |-- pages/      # Vistas principales
+|   |-- hooks/      # Custom hooks
+|   `-- styles/     # Estilos globales
+|-- package.json
+|-- README.md
+`-- LICENSE
+
 ✨ Características
 🔍 Búsqueda de ciudades
 
