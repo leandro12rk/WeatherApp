@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# 🌦️ WeatherApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub last commit](https://img.shields.io/github/last-commit/03gabriel12/WeatherApp?color=blue)
+![GitHub repo size](https://img.shields.io/github/repo-size/03gabriel12/WeatherApp?color=green)
+![GitHub license](https://img.shields.io/github/license/03gabriel12/WeatherApp?color=yellow)
+![GitHub stars](https://img.shields.io/github/stars/03gabriel12/WeatherApp?style=social)
 
-## Available Scripts
+Aplicación de clima desarrollada como parte de mi **portafolio personal**.  
+Permite consultar el estado del tiempo en cualquier ciudad utilizando datos en tiempo real 🌍.  
 
-In the project directory, you can run:
+🔗 **Demo en vivo:** [WeatherApp en GitHub Pages](https://03gabriel12.github.io/WeatherApp/)  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tecnologías usadas
+- ⚛️ **React** con Hooks
+- 🎨 **TailwindCSS** para los estilos
+- 🌐 **API OpenWeather** para datos del clima
+- 📦 **Vite / Next.js** (dependiendo de la configuración final)
+- 🚀 **GitHub Pages** para despliegue
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📷 Vista previa
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![WeatherApp Demo](./preview.png)  
+*(Agrega aquí una captura de pantalla o GIF de tu app en acción)*
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📖 Cómo usar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clona este repositorio  
+   ```bash
+   git clone https://github.com/03gabriel12/WeatherApp.git
+   cd WeatherApp
+Instala dependencias
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bash
+Copiar código
+npm install
+Configura tu API Key de OpenWeather en un archivo .env
 
-### `npm run eject`
+env
+Copiar código
+VITE_API_KEY=tu_api_key_aqui
+Inicia el servidor de desarrollo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+Copiar código
+npm run dev
+📂 Estructura del proyecto
+lua
+Copiar código
+WeatherApp/
+│-- public/         # Recursos estáticos
+│-- src/
+│   │-- components/ # Componentes reutilizables
+│   │-- pages/      # Vistas principales
+│   │-- hooks/      # Custom hooks
+│   │-- styles/     # Estilos globales
+│-- package.json
+│-- README.md
+│-- LICENSE
+✨ Características
+🔍 Búsqueda de ciudades
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📊 Información detallada del clima
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📱 Diseño responsive
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+⚡ Rápida y ligera
 
-## Learn More
+🧑‍💻 Autor
+Desarrollado por Leandro Rodríguez
+📌 LinkedIn | 🌐 Portafolio | 🐙 GitHub
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📜 Licencia
+Este proyecto está bajo la licencia MIT.
+Consulta el archivo LICENSE para más información.
