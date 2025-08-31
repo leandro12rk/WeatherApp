@@ -1,10 +1,30 @@
-$Azul_Cielo: #87ceeb;
-$Azul_Marino: #4682b4;
-$Gris_Nublado: #b0c4de;
-$Amarillo_Sol: #ffd700;
-$Blanco_Nieve: rgba(#ffffff, 0.3);
-$color_primary: #000; //#551a8b
-$color_secondary: #007aff;
+
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Caesar+Dressing&display=swap');
+
+// Variables de colores
+$primary-color: #171523;
+$secondary-color: #F0F8FF;
+$tertiary-color: #D9D9D9;
+$font-family1:"Caesar Dressing";
+$font-family2:"Brygada 1918";
+
+
+
+
+.caesar-dressing-regular{
+  font-family: "Caesar Dressing", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.brygada-1918-regular {
+  font-family: "Brygada 1918", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 // Breakpoints para consultas de medios
 
 // Breakpoint mínimo para pantallas pequeñas (sm) >= 576px

@@ -1,14 +1,10 @@
+@import "../../../../node_modules/swiper/swiper";
+@import "../../../../node_modules/swiper/modules/navigation";
+@import "../../../../node_modules/swiper/modules/pagination";
+@import "../../../../node_modules/swiper/modules/scrollbar";
+
 .swiper {
   height: 100%;
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: rgba($color_secondary, 0.3);
-    &:hover,
-    &:focus {
-      color: $color_secondary;
-    }
-  }
-
   .active {
     position: relative;
     &::after {
@@ -18,9 +14,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: $Blanco_Nieve;
+      // background-color: $Blanco_Nieve;
       z-index: -1;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
     }
   }
 }
