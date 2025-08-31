@@ -8,6 +8,7 @@ import { SearchContext } from "../context/SearchContext";
 
 import { getAllDataWeather } from "../API/Api_Weather";
 import { compareActualActiveTimeDate } from "../utils/Functions";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 export default function ContainerWeatherDay() {
   const [data, setData] = useState(null);
   const { searchTerm } = useContext(SearchContext);
@@ -58,14 +59,18 @@ export default function ContainerWeatherDay() {
   );
   //console.info("hora actual " + data.location.localtime);
 
+  function getHour(forecastData) {
+    return forecastData.time.split(" ")[1];
+  }
+
   return (
     <div className="container-weather-day">
       <h3>Weather Day</h3>
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={10}
-        slidesPerView={3}
+        spaceBetween={3}
+        slidesPerView={6}
         scrollbar={{ draggable: true }}
         breakpoints={{
           320: {
@@ -77,11 +82,11 @@ export default function ContainerWeatherDay() {
             spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 3, // 3 slides visibles en pantallas grandes
+            slidesPerView: 5, // 3 slides visibles en pantallas grandes
             spaceBetween: 15,
           },
           1440: {
-            slidesPerView: 4, // 4 slides visibles en pantallas muy grandes
+            slidesPerView: 6, // 4 slides visibles en pantallas muy grandes
             spaceBetween: 20,
           },
         }}
@@ -100,19 +105,18 @@ export default function ContainerWeatherDay() {
                     forecastData.time
                   )
                     ? "active"
-                    : ""
+                    : "no-active"
                 } `}>
-                <span>Time: {forecastData.time}</span>
-                <span>Temp: {forecastData.temp_c}°C</span>
+                <span>{forecastData.condition.text}</span>
                 <span className="container-icon">
-                  <span>
-                    <img
-                      src={forecastData.condition.icon}
-                      className="img-fluid"
-                      alt={forecastData.condition.text}
-                    />
-                  </span>
-                  <span>{forecastData.condition.text}</span>
+                  <img
+                    src={forecastData.condition.icon}
+                    className="img-fluid"
+                    alt={forecastData.condition.text}
+                  />
+                </span>
+                <span className="time-hourly">
+                  {getHour(forecastData)} <AccessTimeIcon />
                 </span>
               </div>
             </SwiperSlide>

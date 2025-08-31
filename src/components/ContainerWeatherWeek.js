@@ -58,171 +58,56 @@ export default function ContainerWeatherWeek() {
     <div className="container-weather-week">
       <h3>Weather Week</h3>
 
-      <SwiperSm activeIndex={activeIndex} data={data} />
-      <SwiperLg activeIndex={activeIndex} data={data} />
+      <Swiper
+        className="swiper-sm"
+        modules={[Navigation, Pagination, A11y]}
+        spaceBetween={5}
+        slidesPerView={7}
+        breakpoints={{
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+          },
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 5,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 5,
+          },
+          1440: {
+            slidesPerView: 5,
+            spaceBetween: 5,
+          },
+        }}
+        initialSlide={activeIndex !== -1 ? activeIndex : 0}>
+        {data.forecast.forecastday.map((forecastData, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className={`container-weather-week-item ${
+                compareActualActiveDate(
+                  forecastData.date,
+                  data.location.localtime
+                )
+                  ? "active"
+                  : ""
+              } `}>
+              {forecastData.date}
+              <span className="container-icon">
+                <span>
+                  <img
+                    src={forecastData.day.condition.icon}
+                    className="img-fluid"
+                    alt={forecastData.day.condition.text}
+                  />
+                </span>
+                <span>{forecastData.day.condition.text}</span>
+              </span>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-  );
-}
-
-function breakpoints() {
-  return {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 5,
-    },
-    640: {
-      slidesPerView: 4,
-      spaceBetween: 10,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-    1440: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-  };
-}
-
-function SwiperSm({ activeIndex, data }) {
-  return (
-    <Swiper
-      className="swiper-sm"
-      modules={[Navigation, Pagination, A11y]}
-      spaceBetween={10}
-      slidesPerView={3}
-      breakpoints={{
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 5,
-        },
-        640: {
-          slidesPerView: 4,
-          spaceBetween: 10,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        1440: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-      }}
-      initialSlide={activeIndex !== -1 ? activeIndex : 0}>
-      {data.forecast.forecastday.map((forecastData, index) => (
-        <SwiperSlide key={index}>
-          <div
-            className={`container-weather-week-item ${
-              compareActualActiveDate(
-                forecastData.date,
-                data.location.localtime
-              )
-                ? "active"
-                : "no-active"
-            } `}>
-            {forecastData.date}
-            <span className="container-icon">
-              <span>
-                <img
-                  src={forecastData.day.condition.icon}
-                  className="img-fluid"
-                  alt={forecastData.day.condition.text}
-                />
-              </span>
-              <span>{forecastData.day.condition.text}</span>
-            </span>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
-}
-function SwiperSlideData({ data }) {
-  return (
-    <>
-      {data.forecast.forecastday.map((forecastData, index) => (
-        <SwiperSlide key={index}>
-          <div
-            className={`container-weather-week-item ${
-              compareActualActiveDate(
-                forecastData.date,
-                data.location.localtime
-              )
-                ? "active"
-                : ""
-            } `}>
-            {forecastData.date}
-            <span className="container-icon">
-              <span>
-                <img
-                  src={forecastData.day.condition.icon}
-                  className="img-fluid"
-                  alt={forecastData.day.condition.text}
-                />
-              </span>
-              <span>{forecastData.day.condition.text}</span>
-            </span>
-          </div>
-        </SwiperSlide>
-      ))}
-    </>
-  );
-}
-function SwiperLg({ activeIndex, data }) {
-  return (
-    <Swiper
-      className="swiper-lg"
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      scrollbar={{ draggable: true }}
-      spaceBetween={10}
-      slidesPerView={3}
-      direction="vertical"
-      breakpoints={{
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 5,
-        },
-        640: {
-          slidesPerView: 4,
-          spaceBetween: 10,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        1440: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-      }}
-      initialSlide={activeIndex !== -1 ? activeIndex : 0}>
-      {data.forecast.forecastday.map((forecastData, index) => (
-        <SwiperSlide key={index}>
-          <div
-            className={`container-weather-week-item ${
-              compareActualActiveDate(
-                forecastData.date,
-                data.location.localtime
-              )
-                ? "active"
-                : "no-active"
-            } `}>
-            {forecastData.date}
-            <span className="container-icon">
-              <span>
-                <img
-                  src={forecastData.day.condition.icon}
-                  className="img-fluid"
-                  alt={forecastData.day.condition.text}
-                />
-              </span>
-              <span>{forecastData.day.condition.text}</span>
-            </span>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
   );
 }

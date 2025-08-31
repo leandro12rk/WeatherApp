@@ -1,33 +1,24 @@
-import React from "react";
-
+import React, { useEffect, useRef } from "react";
 import ContainerWeatherActual from "../components/ContainerWeatherActual";
 import ContainerWeatherDay from "../components/ContainerWeatherDay";
 import ContainerWeatherTemperature from "../components/ContainerWeatherTemperature";
 import ContainerWeatherWeek from "../components/ContainerWeatherWeek";
-import Map from "../components/Map";
+import { SearchProvider } from "../context/SearchContext";
 import SearchInput from "../components/SearchInput";
 export default function Home() {
   return (
-    <div id="Container-home">
-      <div>
-        <div className="Header">
-          <SearchInput />
-        </div>
-        <div className="container-body-home">
-          <div className="container-weather">
-            <div className="container-weather-l">
-              <ContainerWeatherActual />
-              <ContainerWeatherTemperature />
-            </div>
-            <ContainerWeatherDay />
+    <SearchProvider>
+      <div className="container-body">
+        <SearchInput />
+        <div className="container-sections container-fluid">
+          <div className="section">
+            <ContainerWeatherActual />
+            <ContainerWeatherTemperature />
           </div>
-          <div></div>
+          <ContainerWeatherDay />
+          <ContainerWeatherWeek />
         </div>
       </div>
-
-      <ContainerWeatherWeek />
-
-      <Map longitude={-0.1062} latitude={51.5171} />
-    </div>
+    </SearchProvider>
   );
 }

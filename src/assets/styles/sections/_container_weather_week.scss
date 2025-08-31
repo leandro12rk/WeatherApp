@@ -1,0 +1,30 @@
+.container-weather-week {
+  @extend .box-shadow;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 80%;
+  border-radius: 0.5rem;
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .container-weather-week-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: center;
+    &.active {
+      @extend .box-shadow;
+      background-color: $tertiary-color;
+      border-radius: 0.5rem;
+    }
+    .container-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
