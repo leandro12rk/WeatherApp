@@ -7,10 +7,7 @@ const EnvContext = createContext();
 export const EnvProvider = ({ children }) => {
     const envVariables = {
         apiWeatherKey: process.env.REACT_APP_API_WEATHER_KEY,
-        apiWeatherUrl: process.env.REACT_APP_API_WEATHER_URL,
-        baseUrl: process.env.REACT_APP_BASE_URL,
-        apiMapKey:process.env.REACT_APP_API_MAPS_KEY,
-        apiMapUrl:process.env.REACT_APP_MAPS_URL
+        apiWeatherUrl: process.env.REACT_APP_API_WEATHER_URL
     };
 
     return (
